@@ -1,6 +1,4 @@
 package models;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Sneaker extends Product {
     private String brand;
@@ -23,6 +21,12 @@ public class Sneaker extends Product {
         this.brand = brand;
         this.sport = sport;
         this.size = size;
+    }
+
+    public Sneaker(String expectedBrand, String expectedName, String expectedSport, Double expectedPrice, Double expectedSize, Integer expectedStock) {
+    }
+
+    public Sneaker(int nextId, String name, String brand, String sport, Double size, Integer stock, Double price) {
     }
 
     public Sneaker(String itemName, Double price, Integer id, Integer stock) {

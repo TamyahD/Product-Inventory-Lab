@@ -27,7 +27,7 @@ public class SneakerTest {
         Double expectedPrice = 80.00;
 
         Sneaker testSneaker = new Sneaker(expectedBrand, expectedName, expectedSport,
-                                expectedPrice, expectedId, expectedSize, expectedStock);
+                                expectedPrice, expectedSize, expectedStock);
 
         assertEquals(expectedId, testSneaker.getId());
         assertEquals(expectedName, testSneaker.getItemName());
@@ -90,7 +90,6 @@ public class SneakerTest {
     public void testSetAirMaxName() {
         // Given
         String expected = "Air Max 97";
-//        sneaker.setItemName("Nike Air Max 97");
         // When
         sneaker.setItemName(expected);
         String actual = sneaker.getItemName();
