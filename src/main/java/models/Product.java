@@ -1,3 +1,5 @@
+package models;
+
 public abstract class Product {
     private String itemName;
     private Double price;
