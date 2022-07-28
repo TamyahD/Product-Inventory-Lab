@@ -6,136 +6,200 @@ import static org.junit.Assert.*;
 
 public class SneakerTest {
     Sneaker sneaker;
+//
+//    Integer expectedId = 6;
+//    String expectedName = "Stan Smith";
+//    String expectedBrand = "Adidas";
+//    String expectedSport = "Tennis";
+//    Double expectedSize = 10.5;
+//    Integer expectedStock = 10;
+//    Double expectedPrice = 80.00;
+//
+
+    @Test
+    public void testConstructor() {
+        Integer expectedId = 6;
+        String expectedName = "Stan Smith";
+        String expectedBrand = "Adidas";
+        String expectedSport = "Tennis";
+        Double expectedSize = 10.5;
+        Integer expectedStock = 10;
+        Double expectedPrice = 80.00;
+
+        Sneaker testSneaker = new Sneaker(expectedBrand, expectedName, expectedSport,
+                                expectedPrice, expectedId, expectedSize, expectedStock);
+
+        assertEquals(expectedId, testSneaker.getId());
+        assertEquals(expectedName, testSneaker.getItemName());
+        assertEquals(expectedSport, testSneaker.getSport());
+        assertEquals(expectedBrand, testSneaker.getBrand());
+        assertEquals(expectedStock, testSneaker.getStock());
+        assertEquals(expectedSize, testSneaker.getSize());
+    }
+
+/* FIXME this is the correct format of testing setter methods
+    * // Given
+    * String expected = "sometext";
+    * // When
+    * testSneaker = new Sneaker();
+    * testSneaker.setName(expected)
+    * // Then
+    * assertEquals(expected, testSneaker.get());
+    * */
 
     @Before
-    public void testCreateAirMaxSneaker() {
-        sneaker = new Sneaker("Nike","Air Max", 120.00, 12345, 8.5, 18);
+    public void testCreateSneaker() {
+        sneaker = new Sneaker("Nike", "Air Max", "running",
+                                85.00, 1, 7.5, 9);
     }
+
 
     @Test
     public void testGetAirMaxBrand() {
         // Given
-        String expectedAirMaxBrand = "Nike";
+        String expected = "Nike";
         // When
-        String actualAirMaxBrand= sneaker.getBrand();
+        String actual = sneaker.getBrand();
         // Then
-        assertSame(expectedAirMaxBrand, actualAirMaxBrand);
+        assertSame(expected, actual);
     }
+
 
     @Test
     public void testSetAirMaxBrand() {
         // Given
-        sneaker.setBrand("Air Jordan");
+        String expected = "Air Jordan";
         // When
-        String expectedAirMaxBrand = "Air Jordan";
-        String actualAirMaxBrand = sneaker.getBrand();
+        sneaker.setBrand(expected);
+        String actual = sneaker.getBrand();
         // Then
-        assertSame(expectedAirMaxBrand, actualAirMaxBrand);
+        assertSame(expected, actual);
     }
-
 
     @Test
     public void testGetAirMaxName() {
         // Given
-        String expectedAirMaxName = "Air Max";
+        String expected = "Air Max";
         // When
-        String actualAirMaxName = sneaker.getItemName();
+        String actual = sneaker.getItemName();
         // Then
-        assertSame(expectedAirMaxName, actualAirMaxName);
+        assertSame(expected, actual);
     }
 
     @Test
     public void testSetAirMaxName() {
         // Given
-        sneaker.setItemName("Nike Air Max 97");
+        String expected = "Air Max 97";
+//        sneaker.setItemName("Nike Air Max 97");
         // When
-        String expectedAirMaxName = "Nike Air Max 97";
-        String actualAirMaxName = sneaker.getItemName();
+        sneaker.setItemName(expected);
+        String actual = sneaker.getItemName();
         // Then
-        assertSame(expectedAirMaxName, actualAirMaxName);
+        assertSame(expected, actual);
+    }
+
+    @Test
+    public void testGetAirMaxSportType() {
+        // Given
+        String expected = "running";
+        // When
+        String actual = sneaker.getSport();
+        // Then
+        assertSame(expected, actual);
+    }
+
+    @Test
+    public void testSetAirMaxSportType() {
+        // Given
+        String expected = "basketball";
+        // When
+        sneaker.setSport(expected);
+        String actual = sneaker.getSport();
+        // Then
+        assertSame(expected, actual);
     }
 
     @Test
     public void testGetAirMaxPrice() {
         // Given
-        Double expectedAirMaxPrice = 120.00;
+        Double expected = 85.00;
         // When
-        Double actualAirMaxPrice = sneaker.getPrice();
+        Double actual = sneaker.getPrice();
         // Then
-        assertEquals(expectedAirMaxPrice, actualAirMaxPrice);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testSetAirMaxPrice() {
         // Given
-        sneaker.setPrice(150.00);
+        Double expected = 150.00;
         // When
-        Double expectedAirMaxPrice = 150.00;
-        Double actualAirMaxPrice = sneaker.getPrice();
+        sneaker.setPrice(expected);
+        Double actual = sneaker.getPrice();
         // Then
-        assertEquals(expectedAirMaxPrice, actualAirMaxPrice);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testGetAirMaxId() {
         // Given
-        Integer expectedAirMaxId = 12345;
+        Integer expected = 1;
         // When
-        Integer actualAirMaxId = sneaker.getId();
+        Integer actual = sneaker.getId();
         // Then
-        assertEquals(expectedAirMaxId, actualAirMaxId);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testSetAirMaxId() {
         // Given
-        sneaker.setId(1234597);
+        Integer expected = 12;
         // When
-        Integer expectedAirMaxPrice = 1234597;
-        Integer actualAirMaxPrice = sneaker.getId();
+        sneaker.setId(expected);
+        Integer actual = sneaker.getId();
         // Then
-        assertEquals(expectedAirMaxPrice, actualAirMaxPrice);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testGetAirMaxSize() {
         // Given
-        Double expectedAirMaxSize = 8.5;
+        Double expected = 7.5;
         // When
-        Double actualAirMaxSize = sneaker.getSize();
+        Double actual = sneaker.getSize();
         // Then
-        assertEquals(expectedAirMaxSize, actualAirMaxSize);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testSetAirMaxSize() {
         // Given
-        sneaker.setSize(7.0);
+        Double expected = 8.0;
         // When
-        Double expectedAirMaxSize = 7.0;
-        Double actualAirMaxSize = sneaker.getSize();
+        sneaker.setSize(expected);
+        Double actual = sneaker.getSize();
         // Then
-        assertEquals(expectedAirMaxSize, actualAirMaxSize);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testGetAirMaxStock() {
         // Given
-        Integer expectedAirMaxStock = 18;
+        Integer expected = 9;
         // When
-        Integer actualAirMaxStock = sneaker.getStock();
+        Integer actual = sneaker.getStock();
         // Then
-        assertEquals(expectedAirMaxStock, actualAirMaxStock);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testSetAirMaxStock() {
         // Given
-        sneaker.setStock(75);
+        Integer expected = 23;
         // When
-        Integer expectedAirMaxStock = 75;
-        Integer actualAirMaxStock = sneaker.getStock();
+        sneaker.setStock(expected);
+        Integer actual = sneaker.getStock();
         // Then
-        assertSame(expectedAirMaxStock, actualAirMaxStock);
+        assertEquals(expected, actual);
     }
 }

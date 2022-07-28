@@ -20,6 +20,8 @@ public abstract class Product {
         this.id = id;
     }
 
+    public Product() {}
+
 
     public String getItemName() {
         return itemName;
