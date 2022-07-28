@@ -27,7 +27,7 @@ public class SneakerTest {
         Double expectedPrice = 80.00;
 
         Sneaker testSneaker = new Sneaker(expectedBrand, expectedName, expectedSport,
-                                expectedPrice, expectedSize, expectedStock);
+                                expectedPrice, expectedId, expectedSize, expectedStock);
 
         assertEquals(expectedId, testSneaker.getId());
         assertEquals(expectedName, testSneaker.getItemName());
