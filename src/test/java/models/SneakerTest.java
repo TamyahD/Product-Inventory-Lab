@@ -30,7 +30,7 @@ public class SneakerTest {
                                 expectedPrice, expectedId, expectedSize, expectedStock);
 
         assertEquals(expectedId, testSneaker.getId());
-        assertEquals(expectedName, testSneaker.getItemName());
+        assertEquals(expectedName, testSneaker.getName());
         assertEquals(expectedSport, testSneaker.getSport());
         assertEquals(expectedBrand, testSneaker.getBrand());
         assertEquals(expectedStock, testSneaker.getStock());
@@ -81,7 +81,7 @@ public class SneakerTest {
         // Given
         String expected = "Air Max";
         // When
-        String actual = sneaker.getItemName();
+        String actual = sneaker.getName();
         // Then
         assertSame(expected, actual);
     }
@@ -91,8 +91,8 @@ public class SneakerTest {
         // Given
         String expected = "Air Max 97";
         // When
-        sneaker.setItemName(expected);
-        String actual = sneaker.getItemName();
+        sneaker.setName(expected);
+        String actual = sneaker.getName();
         // Then
         assertSame(expected, actual);
     }

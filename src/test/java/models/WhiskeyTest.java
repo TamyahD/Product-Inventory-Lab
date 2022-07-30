@@ -39,7 +39,7 @@ public class WhiskeyTest {
         // Given
         String expectedWhiskeyName = "Irish Whiskey";
         // When
-        String actualWhiskeyName = whiskey.getItemName();
+        String actualWhiskeyName = whiskey.getName();
         // Then
         assertSame(expectedWhiskeyName, actualWhiskeyName);
     }
@@ -47,10 +47,10 @@ public class WhiskeyTest {
     @Test
     public void setWhiskeyName() {
         // Given
-        whiskey.setItemName("Small Batch");
+        whiskey.setName("Small Batch");
         // When
         String expectedWhiskeyName = "Small Batch";
-        String actualWhiskeyName = whiskey.getItemName();
+        String actualWhiskeyName = whiskey.getName();
         // Then
         assertSame(expectedWhiskeyName, actualWhiskeyName);
     }

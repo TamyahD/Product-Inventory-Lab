@@ -3,8 +3,6 @@ package services;
 import models.Sneaker;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class SneakerServiceTest {
@@ -23,7 +21,7 @@ public class SneakerServiceTest {
         Sneaker testSneaker = sneakerService.create(expectedName, expectedBrand, expectedSport,
                                                         expectedSize, expectedStock, expectedPrice);
         Integer actualId = testSneaker.getId();
-        String actualName = testSneaker.getItemName();
+        String actualName = testSneaker.getName();
         String actualBrand = testSneaker.getBrand();
         String actualSport = testSneaker.getSport();
         Double actualSize = testSneaker.getSize();
@@ -73,7 +71,7 @@ public class SneakerServiceTest {
         // Then
         assertSame(expectedSneakerArray[1],s2);
         assertSame(expectedSneakerArray[0].getBrand(),s1.getBrand());
-        assertSame(expectedSneakerArray[3].getItemName(),s4.getItemName());
+        assertSame(expectedSneakerArray[3].getName(),s4.getName());
     }
 
     @Test

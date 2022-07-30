@@ -2,21 +2,21 @@ package models;
 
 public abstract class Product {
     //TODO maybe add brand property here instead of individual product classes
-    private String itemName;
+    private String name;
     private Double price;
     private int id;
-//    private Integer id;
     private Integer stock;
+//    private Integer id;
 
-    public Product(String itemName, Double price, int id, Integer stock) {
-        this.itemName = itemName;
+    public Product(String name, Double price, int id, Integer stock) {
+        this.name = name;
         this.price = price;
         this.id = id;
         this.stock = stock;
     }
 
-    public Product(String itemName, Double price, int id) {
-        this.itemName = itemName;
+    public Product(String name, Double price, int id) {
+        this.name = name;
         this.price = price;
         this.id = id;
     }
@@ -24,12 +24,12 @@ public abstract class Product {
     public Product() {}
 
 
-    public String getItemName() {
-        return itemName;
+    public String getName() {
+        return name;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getPrice() {
