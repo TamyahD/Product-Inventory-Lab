@@ -18,7 +18,7 @@ public class SneakerTest {
 
     @Test
     public void testConstructor() {
-        Integer expectedId = 6;
+        int expectedId = 6;
         String expectedName = "Stan Smith";
         String expectedBrand = "Adidas";
         String expectedSport = "Tennis";

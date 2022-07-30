@@ -4,17 +4,18 @@ public abstract class Product {
     //TODO maybe add brand property here instead of individual product classes
     private String itemName;
     private Double price;
-    private Integer id;
+    private int id;
+//    private Integer id;
     private Integer stock;
 
-    public Product(String itemName, Double price, Integer id, Integer stock) {
+    public Product(String itemName, Double price, int id, Integer stock) {
         this.itemName = itemName;
         this.price = price;
         this.id = id;
         this.stock = stock;
     }
 
-    public Product(String itemName, Double price, Integer id) {
+    public Product(String itemName, Double price, int id) {
         this.itemName = itemName;
         this.price = price;
         this.id = id;
@@ -39,11 +40,11 @@ public abstract class Product {
         this.price = price;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

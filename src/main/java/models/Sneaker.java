@@ -15,7 +15,6 @@ public class Sneaker extends Product {
 //    Sneaker s4 = new Sneaker("Vans", "Era Core Classics",  "skate",
 //                            54.95, 1111195, 6.5, 17);
 
-
     public Sneaker(String brand, String itemName, String sport, Double price, Integer id, Double size, Integer stock) {
         super(itemName, price, id, stock);
         this.brand = brand;
@@ -23,10 +22,14 @@ public class Sneaker extends Product {
         this.size = size;
     }
 
-    public Sneaker(String expectedBrand, String expectedName, String expectedSport, Double expectedPrice, Double expectedSize, Integer expectedStock) {
-    }
-
-    public Sneaker(int nextId, String name, String brand, String sport, Double size, Integer stock, Double price) {
+//    public Sneaker(String expectedBrand, String expectedName, String expectedSport, Double expectedPrice, Double expectedSize, Integer expectedStock) {
+//    }
+//
+    public Sneaker(Integer nextId, String name, String brand, String sport, Double size, Integer stock, Double price) {
+        super(name, price, nextId, stock);
+        this.brand=brand;
+        this.sport=sport;
+        this.size=size;
     }
 
     public Sneaker(String itemName, Double price, Integer id, Integer stock) {
@@ -65,6 +68,4 @@ public class Sneaker extends Product {
     public void setSize(Double size) {
         this.size = size;
     }
-
-
 }
