@@ -5,12 +5,13 @@ public class VideoGame extends Product{
     private String format;
 
     /* TODO test cases for VideoGame */
-    public VideoGame(String name, Double price, int id,Integer stock,
-                     String consoleType, String format) {
-        super(name, price, id, stock);
+    public VideoGame(Integer id, String gameTitle, String consoleType, String format,
+                     Double price, Integer stock) {
+        super(gameTitle, price, id, stock);
         this.consoleType = consoleType;
         this.format = format;
     }
+    public VideoGame() {}
 
 
     public String getConsoleType() {
