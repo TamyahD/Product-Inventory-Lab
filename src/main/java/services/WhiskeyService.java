@@ -12,7 +12,7 @@ public class WhiskeyService implements ProductService{
 
 
     public Whiskey create(String brand, String itemName,
-                          Double price, int id, Integer stock) {
+                          Double price, Integer stock) {
         if (whiskeyInventory.size()==0) {
             nextId=100;
         }

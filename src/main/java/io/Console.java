@@ -17,9 +17,9 @@ public class Console {
                 "\n(1)Create new product" +
                 "\n(2)Read existing products" +
                 "\n(3)Update product" +
-                "\n(3)Delete product" +
-                "\n(3Get product report)" +
-                "\n(4 or q)Exit program");
+                "\n(4)Delete product" +
+                "\n(5)Get product report)" +
+                "\n(6 or q)Exit program");
 //                "\n(2)Whiskey\t\t (3)Video Game");
     }
 
